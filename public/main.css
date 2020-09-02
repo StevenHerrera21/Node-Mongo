@@ -1,0 +1,11 @@
+.tarjeta{
+    width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid #000000;
+    padding: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+
