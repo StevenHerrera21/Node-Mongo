@@ -1,15 +1,15 @@
-function mostrar(){
-    let filtro= document.getElementById("filtro").value;
-    var tabla;
-    console.log(filtro)
-    fetch('http://localhost:3000/message?user='+filtro)
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(myJson) {
-        for (data of myJson.body){
-            tabla+='<tr><td>'+data._id+'</td><td>'+data.user+'</td><td>'+data.message+'</td><td>'+data.date+'</td></tr>';
-        }
-        $('#tbody').html(tabla);
-    });
+function mostrar(){   
+   $.ajax({
+       url:'http://localhost:3000/user?',
+       method: 'GET',
+       success: function(res){  
+           var js= res;
+           var tabla;
+           console.log(js)
+           for (data of js.body){
+            tabla+='<tr><td>'+data._id+'</td><td>'+data.user+'</td><td>'+data.name+'</td><td>'+data.lastname+'</td></tr>';
+           }
+           $('#tbody').html(tabla);
+       }
+   })
 }

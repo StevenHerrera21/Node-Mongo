@@ -18,7 +18,8 @@ router.get('/', function(req, res){
 router.post('/', function(req, res){
     controller.addUser(req.body.user, req.body.name, req.body.lastname)
         .then((fullUser)=>{
-            response.success(req, res, fullUser, 201)
+            //response.success(req, res, fullUser, 201)
+            res.redirect('/');
         })
         .catch((error) =>{
             response.error(req, res, 'Error simulado',500, 'Es solo una simulación de los errores.')
