@@ -11,10 +11,10 @@
         <div class="tarjeta">
         <h1>Mi propio chat</h1>
         <div id="michat"></div>
-        <form id="message-box">
-            <input type="text" name="chat" id="chat">
-            <input type="text" name="user" id="user">
-            <input type="text" name="message" id="message">
+        <form id="message-box" enctype="multipart/form-data">
+            <!-- <input type="text" name="chat" id="chat"> -->
+            <input type="text" name="user" id="user" placeholder="Id usuario">
+            <input type="text" name="message" id="message" placeholder="Escribe un mensaje.....">
             <input type="file" name="file">
             <input type="submit" value="Enviar>">
         </form>
