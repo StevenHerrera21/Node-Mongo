@@ -1,11 +1,18 @@
+#michat {
+    height: 400px;
+    border: 1px solid #000;
+    width: 90%;
+  }
+#message-box {
+    align-content: right;
+    width: 20%;
+  }
 .tarjeta{
-    width: 700px;
+    width: 400px;
     margin: auto;
     margin-top: 50px;
     border: 2px solid #000000;
     padding: 50px;
     margin-bottom: 50px;
-    text-align: left;
 }
-
 
