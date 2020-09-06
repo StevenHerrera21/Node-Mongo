@@ -16,7 +16,7 @@ $(function() {
     });
 
     socket.on('message', (data) => {
-        michat.append("<p>"+data.user+":"+data.message+"</p><br>");
+        michat.append("<p>"+data.user+": "+data.message+"</p><br>");
         console.log(data)
     });
 
