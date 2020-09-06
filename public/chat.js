@@ -40,5 +40,4 @@ $(function() {
             michat.append("<img class='imagen' src=" + data.file + " id=img' width='200' height='200'> </p>")
         }
     });
-    });   
 });
