@@ -4,8 +4,15 @@ $(function() {
     });
     var michat = $('#michat');
     var chatId= "5f3f1dada5188625a0dda9b5"
+    var usuarioId = "";
     $('#message-box').submit(function(e) {
         e.preventDefault();
+        if ($("#user").val()==""){
+            alert("Ingrese el usuario");
+        }
+        if ($("#message").val()==""){
+            alert("Ingrese el mensaje");
+        }
         var myformData = new FormData();        
         myformData.append('chat', chatId);
         myformData.append('user', $("#user").val());
@@ -26,14 +33,12 @@ $(function() {
                 $('input[type="file"]').val('');
             }
         });     
-
     });
-
     socket.on('message', (data) => {
-        michat.append("<p>"+data.user+":"+data.message+"</p><br>");
+        michat.append("<p>"+data.user+":"+data.message+"</p>");
         if (data.file != ""){
             michat.append("<img class='imagen' src=" + data.file + " id=img' width='200' height='200'> </p>")
         }
     });
-
+    });   
 });

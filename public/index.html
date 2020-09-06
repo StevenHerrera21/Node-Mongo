@@ -10,7 +10,7 @@
     <script src="/message.js"></script>
 </head>
 
-<body>
+<body class="fondoIndex">
     <div class="tarjeta">
 
     
@@ -21,17 +21,21 @@
             <input type="text" class="form-control" name="user" required>
             <label>Nombre</label>
             <input type="text" class="form-control" name="name" required>
-            <label>Apeliido</label>
+            <label>Apelido</label>
             <input type="text" class="form-control" name="lastname" required>
             <br>
             <button type="submit" class="btn btn-primary" >Insertar Usuario</button>
-
     </div>
-    
     </form>
-        <input type="filtro" id="filtro" name="filtro" placeholder="filtro">
-        <button type="buttom" class="btn btn-primary" onclick='mostrar()'>Listar</button>
-    <br></br>
+        <div class="input-group mb-3">
+            <input type="filtro" id="filtro" name="filtro" class="form-control" placeholder="Filtro">
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick='mostrar()' type="button">Listar</button>
+            </div>
+          </div>
+
+        <br>       
+        <br></br> 
     <table class="table">
         <thead class="thead-dark">
             <th>Id</th>
@@ -43,7 +47,7 @@
 
         </tbody>
     </table>
-
+    <button type="buttom" id="irchat" class="btn btn-primary" onclick="window.location='chat.html'">Ir al chat</button>
 </div>
 </body>
 

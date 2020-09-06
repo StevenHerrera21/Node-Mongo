@@ -31,7 +31,6 @@ router.get('/', function(req, res){
 router.post('/', upload.single('file'),function(req, res){
     controller.addMessage(req.body.chat, req.body.user , req.body.message, req.file)
         .then((data)=>{
-            console.log(data.file)
             response.success(req, res, data, 201)
         })
         .catch((error) =>{
