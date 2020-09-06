@@ -30,8 +30,9 @@ router.get('/', function(req, res){
 
 router.post('/', upload.single('file'),function(req, res){
     controller.addMessage(req.body.chat, req.body.user , req.body.message, req.file)
-        .then((fullMessage)=>{
-            response.success(req, res, fullMessage, 201)
+        .then((data)=>{
+            console.log(data.file)
+            response.success(req, res, data, 201)
         })
         .catch((error) =>{
             response.error(req, res, 'Error simulado',500, 'Es solo una simulación de los errores.')
